@@ -14,4 +14,5 @@ log.txt
 *.swp
 *.swo
 tags
-data/config.json
+data/*
+
