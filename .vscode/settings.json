@@ -1,0 +1,5 @@
+{
+    "idf.adapterTargetName": "esp32s3",
+    "idf.port": "/dev/cu.usbmodem1224601",
+    "idf.flashType": "UART"
+}

@@ -1,0 +1,101 @@
+{
+    "network": {
+      "wifi": {
+        "ssid": "kehrer",
+        "password": "stiwoll4711"
+      }
+    },
+    "mqtt": {
+      "server": {
+        "host": "172.16.0.207",
+        "port": 1883,
+        "ssl": false,
+        "username": "blegw",
+        "password": "jie8rieThaeyaeth"
+      },
+      "publish": {
+        "retain": true
+      },
+      "topics": {
+        "prefix": "blegw/",
+        "get_suffix": "/Get",
+        "set_suffix": "/Set"
+      }
+    },
+    "ble": {
+      "//Optional: 'whitelist' or 'blacklist'": [],
+      "// blacklist": [
+        "fc:45:c3:bc:da:a9"
+      ],
+      "whitelist": [
+        "c7:86:03:b9:b7:42",
+        "c9:69:81:7a:d1:6c",
+        "c7:d8:88:f2:eb:44",
+        "db:08:d3:33:38:ef"
+      ],
+      "services": {
+        "definitions": {
+          "F000AB30-0451-4000-B000-000000000000": {
+            "name": "TESS5600 Pressure Sensor"
+          },
+          "F000180F-0451-4000-B000-000000000000" : {
+            "name": "TESS5600 Battery Service"
+          }
+        },
+        "//Optional: 'whitelist' or 'blacklist'": []
+      },
+      "characteristics": {
+        "definitions": {
+          "F000AB3F-0451-4000-B000-000000000000": {
+            "name": "TESS5600 Status",
+            "types": [
+              "boolean"
+            ]   
+          },
+          "F000180F-0451-4000-B000-000000000000": {
+            "name": "TESS5600 Battery",
+            "types": [
+              "boolean",
+              "uint8"
+            ]   
+          },
+          "F000FA01-0451-4000-B000-000000000000": {
+            "name": "TESS5600 Device Name",
+            "types": [
+              "utf8s"
+            ]   
+          },
+          "F000AB31-0451-4000-B000-000000000000": {
+            "name": "TESS5600 Data",
+            "types": [
+              "sint16",
+              "sint32",
+              "sint32",
+              "sint32"
+            ]   
+          },
+          "F000AB32-0451-4000-B000-000000000000": {
+            "name": "TESS5600 Data Rate",
+            "types": [
+              "sint32",
+              "sint32",
+              "sint32"
+            ]   
+          },
+          "F0002A19-0451-4000-B000-000000000000": {
+            "name": "BatteryLevelPct",
+            "types": [
+              "uint8"
+            ]   
+          }
+        },
+        "//Optional: 'whitelist' or 'blacklist'": []
+      },
+      "passkeys": {},
+      "mikeys": {}
+    },
+    "log": {
+      "host": "172.16.0.1",
+      "port": 5000
+    }
+  }
